@@ -53,8 +53,8 @@ func (goofys *goofysMounter) Mount(source string, target string) error {
 		MountPoint: target,
 		Endpoint:   goofys.endpoint,
 		Region:     goofys.region,
-		DirMode:    0755,
-		FileMode:   0644,
+		DirMode:    0777,
+		FileMode:   0666,
 		MountOptions: map[string]string{
 			"allow_other": "",
 		},
